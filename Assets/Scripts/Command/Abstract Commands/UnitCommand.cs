@@ -7,11 +7,8 @@ namespace Command.Commands
     /// </summary>
     public abstract class UnitCommand : ICommand
     {
-        // Fields to store information related to the command.
-        public int ActorUnitID;
-        public int TargetUnitID;
-        public int ActorPlayerID;
-        public int TargetPlayerID;
+        // Struct to store information related to the command.
+        public CommandData commandData;
 
         // References to the actor and target units, accessible by subclasses.
         protected UnitController actorUnit;
@@ -27,5 +24,9 @@ namespace Command.Commands
         /// Must be implemented by concrete subclasses.
         /// </summary>
         public abstract bool WillHitTarget();
+
+        // Setters
+        public void SetActorUnit(UnitController actorUnit) => this.actorUnit = actorUnit;
+        public void SetTargetUnit(UnitController targetUnit) => this.targetUnit = targetUnit;
     }
 }

@@ -11,6 +11,9 @@ namespace Command.Commands
         // A stack to keep track of executed commands.
         private Stack<ICommand> commandRegistry = new Stack<ICommand>();
 
+        // Constructor
+        public CommandInvoker() => SubscribeToEvents();
+
         /// <summary>
         /// Process a command, which involves both executing it and registering it.
         /// </summary>
@@ -45,5 +48,13 @@ namespace Command.Commands
         /// </summary>
         /// <param name="commandToRegister">The command to be registered.</param>
         public void RegisterCommand(ICommand commandToRegister) => commandRegistry.Push(commandToRegister);
+
+        private void SubscribeToEvents() => GameService.Instance.EventService.OnReplayButtonClicked.AddListener(SetReplayStack);
+
+        public void SetReplayStack()
+        {
+            GameService.Instance.ReplayService.SetCommandStack(commandRegistry);
+            commandRegistry.Clear();
+        }
     }
 }

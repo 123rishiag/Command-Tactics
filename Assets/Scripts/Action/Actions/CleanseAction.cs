@@ -8,7 +8,6 @@ namespace Command.Actions
 {
     public class CleanseAction : IAction
     {
-        private const float hitChance = 0.2f;
         private UnitController actorUnit;
         private UnitController targetUnit;
         private bool isSuccessful;

@@ -9,7 +9,7 @@ namespace Command.UI
     public class GameplayUIView : MonoBehaviour, IUIView
     {
         private GameplayUIController controller;
-        [SerializeField] Button undoButton;
+        [SerializeField] private Button undoButton;
         [SerializeField] private TextMeshProUGUI turnText;
         [SerializeField] private TextMeshProUGUI missedText;
         [SerializeField] private Image Player1BackgroundOverlay;

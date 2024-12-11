@@ -3,7 +3,11 @@ namespace Command.Commands
     public interface ICommand
     {
         // This method defines the contract for executing a command.
-        void Execute();
+        public void Execute();
+
+        // This method defines the contract for undoing a command.
+        public void Undo();
+
     }
 
     public struct CommandData

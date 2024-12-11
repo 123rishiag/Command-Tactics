@@ -4,6 +4,7 @@ using Command.Commands;
 using Command.Events;
 using Command.Input;
 using Command.Player;
+using Command.Replay;
 using Command.Sound;
 using Command.UI;
 using Command.Utilities;
@@ -25,6 +26,7 @@ namespace Command.Main
         public EventService EventService { get; private set; }
         public SoundService SoundService { get; private set; }
         public ActionService ActionService { get; private set; }
+        public ReplayService ReplayService { get; private set; }
         public InputService InputService { get; private set; }
         public BattleService BattleService { get; private set; }
         public PlayerService PlayerService { get; private set; }
@@ -47,6 +49,7 @@ namespace Command.Main
             SoundService = new SoundService(soundScriptableObject, sfxSource, bgMusicSource);
             EventService = new EventService();
             ActionService = new ActionService();
+            ReplayService = new ReplayService();
             InputService = new InputService();
             BattleService = new BattleService(battleScriptableObjects);
             PlayerService = new PlayerService();

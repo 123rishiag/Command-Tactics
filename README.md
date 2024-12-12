@@ -40,26 +40,16 @@ A turn-based battle game inspired by retro Final Fantasy games, implementing the
 
 ### **Core Components**
 
-1. **Game Service**
-   - Acts as the Service Locator and manages overall game state.
-2. **SoundService**
-   - Manages sound effects and background music.
-3. **EventService**
-   - Handles event-based communication.
-4. **ActionService**
-   - Executes commands for actions like Attack and Heal.
-5. **InputService**
-   - Processes player inputs.
-6. **CommandInvoker**
-   - Manages and executes command objects.
-7. **BattleService**
-   - Configures and handles battles based on Scriptable Objects.
-8. **PlayerService** 
-   - Maintains players and their units.
-9. **UIService**
-   - Maintains all the UI Elements.
-10. **ReplayService**
-   - Enables replay of actions.
+1. **Game Service**: Acts as the Service Locator and manages overall game state.
+2. **SoundService**: Manages sound effects and background music.
+3. **EventService**: Handles event-based communication.
+4. **ActionService**: Executes commands for actions like Attack and Heal.
+5. **InputService**: Processes player inputs.
+6. **CommandInvoker**: Manages and executes command objects.
+7. **BattleService**: Configures and handles battles based on Scriptable Objects.
+8. **PlayerService**: Maintains players and their units.
+9. **UIService**: Maintains all the UI Elements.
+10. **ReplayService**: Enables replay of actions.
 
 ---
 

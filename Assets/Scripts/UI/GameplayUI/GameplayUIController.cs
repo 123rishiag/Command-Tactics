@@ -16,6 +16,8 @@ namespace Command.UI
 
         public void Show() => gameplayView.EnableView();
 
+        public void Hide() => gameplayView.DisableView();
+
         public void SetTurnNumber(int turnNumber) => gameplayView.SetTurnText($"Turn: {turnNumber}");
 
         public void ShowActionOverlay(int activePlayer)

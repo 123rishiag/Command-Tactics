@@ -1,6 +1,6 @@
+using Command.Commands;
 using Command.Main;
 using Command.Player;
-using Command.Commands;
 
 namespace Command.Input
 {
@@ -25,7 +25,7 @@ namespace Command.Input
 
         public void UpdateInputService()
         {
-            if(currentState == InputState.SELECTING_TARGET)
+            if (currentState == InputState.SELECTING_TARGET)
                 mouseInputHandler.HandleTargetSelection(targetType);
         }
 

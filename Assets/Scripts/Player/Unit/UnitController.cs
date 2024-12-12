@@ -1,8 +1,8 @@
-using UnityEngine;
-using Command.Main;
 using Command.Commands;
-using System.Collections;
+using Command.Main;
 using System;
+using System.Collections;
+using UnityEngine;
 using Object = UnityEngine.Object;
 
 namespace Command.Player
@@ -17,7 +17,7 @@ namespace Command.Player
         public UnitType UnitType => unitScriptableObject.UnitType;
         public int CurrentHealth { get; private set; }
         public UnitUsedState UsedState { get; private set; }
-        
+
         private UnitAliveState aliveState;
         private Vector3 originalPosition;
         public int CurrentPower;
@@ -78,7 +78,7 @@ namespace Command.Player
             else
                 unitView.PlayAnimation(UnitAnimations.HIT);
 
-            unitView.UpdateHealthBar((float) CurrentHealth / CurrentMaxHealth);
+            unitView.UpdateHealthBar((float)CurrentHealth / CurrentMaxHealth);
         }
 
         public void RestoreHealth(int healthToRestore)
@@ -99,7 +99,7 @@ namespace Command.Player
             MoveToBattlePosition(battlePosition, callback, true, actionType);
         }
 
-        private void MoveToBattlePosition(Vector3 battlePosition, Action callback = null,  bool shouldPlayActionAnimation = true, CommandType actionTypeToExecute = CommandType.None)
+        private void MoveToBattlePosition(Vector3 battlePosition, Action callback = null, bool shouldPlayActionAnimation = true, CommandType actionTypeToExecute = CommandType.None)
         {
             float moveTime = Vector3.Distance(unitView.transform.position, battlePosition) / unitScriptableObject.MovementSpeed;
             unitView.StartCoroutine(MoveToPositionOverTime(battlePosition, moveTime, callback, shouldPlayActionAnimation, actionTypeToExecute));
@@ -130,7 +130,7 @@ namespace Command.Player
         {
             if (actionType == CommandType.None)
                 return;
-            
+
             if (actionType == unitScriptableObject.executableCommands[0])
                 unitView.PlayAnimation(UnitAnimations.ACTION1);
             else if (actionType == unitScriptableObject.executableCommands[1])
@@ -159,7 +159,7 @@ namespace Command.Player
 
         public void ResetUnitIndicator() => unitView.SetUnitIndicator(false);
 
-        public Vector3 GetEnemyPosition() 
+        public Vector3 GetEnemyPosition()
         {
             if (Owner.PlayerID == 1)
                 return unitView.transform.position + unitScriptableObject.EnemyBattlePositionOffset;

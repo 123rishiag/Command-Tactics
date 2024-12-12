@@ -1,8 +1,8 @@
+using Command.Commands;
+using Command.Input;
+using Command.Main;
 using System.Collections.Generic;
 using UnityEngine;
-using Command.Main;
-using Command.Input;
-using Command.Commands;
 
 namespace Command.UI
 {
@@ -42,7 +42,7 @@ namespace Command.UI
 
         private void ShowBattleSelectionView(int battleCount) => battleSelectionController.Show(battleCount);
 
-        private void SubscribeToEvents() => GameService.Instance.EventService.OnReplayButtonClicked.AddListener(HideBattleEndUI);
+        private void SubscribeToEvents() => GameService.Instance.EventService.OnReplayButtonClicked.AddListener(HideViews);
 
         public void ShowGameplayView() => gameplayController.Show();
 
@@ -74,7 +74,11 @@ namespace Command.UI
             battleEndController.Show();
         }
 
-        public void HideBattleEndUI() => battleEndController.Hide();
+        private void HideViews()
+        {
+            battleEndController.Hide();
+            gameplayController.Hide();
+        }
 
         public void UpdateTurnNumber(int turnNumber) => gameplayController.SetTurnNumber(turnNumber);
 

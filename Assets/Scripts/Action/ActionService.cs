@@ -1,5 +1,5 @@
-using Command.Input;
 using Command.Commands;
+using Command.Input;
 using System.Collections.Generic;
 
 namespace Command.Actions

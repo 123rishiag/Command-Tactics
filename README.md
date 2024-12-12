@@ -105,13 +105,18 @@ A turn-based battle game inspired by retro Final Fantasy games, implementing the
 
 To illustrate the Command Pattern flow and Replay functionality, you can include the following placeholders for images:
 
+### **Command Pattern Components**
+![Command Pattern Components](Documents/command-pattern-components.png)
+
+- **Description**: This diagram visually represents the interaction between the components of the Command Pattern: Abstract Command, Concrete Command, Client, Command Invoker, and Receiver.
+
 ### **Normal Command Flow**
 ![Normal Command Flow](Documents/normal-command-flow.png)
 
 - **Description**: Displays the interaction between the Client, Command Invoker, and Receiver during a normal command execution.
 
 ### **Replay Flow**
-![Replay Flow](Documents/replay-flow.png)
+![Replay Flow](Documents/replay-command-flow.png)
 
 - **Description**: Showcases how stored commands are re-executed by the ReplayService for playback functionality.
 

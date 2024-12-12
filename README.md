@@ -105,7 +105,7 @@ To illustrate the Command Pattern flow and Replay functionality, you can include
 
 - **Description**: Displays the interaction between the Client, Command Invoker, and Receiver during a normal command execution.
 
-### **Replay Flow**
+### **Replay Command Flow**
 ![Replay Flow](Documents/replay-command-flow.png)
 
 - **Description**: Showcases how stored commands are re-executed by the ReplayService for playback functionality.

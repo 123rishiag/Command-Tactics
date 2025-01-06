@@ -125,3 +125,11 @@ To illustrate the Command Pattern flow and Replay functionality, you can include
 ## __Video Demo__
 
 [__Watch the Gameplay Video__](https://www.loom.com/share/4ae2f3a5bc8344d884080864a6cb4460?sid=1d1f7868-aa67-449a-8e44-081c2b74169a)
+
+---
+
+## Play Link
+
+[Play the Game](https://outscal.com/narishabhgarg/game/play-command-tactics-13-game)
+
+---
